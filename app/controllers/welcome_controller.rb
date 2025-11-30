@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
-  def ine
-  end
-
   def index
   end
+
+  def about
+  end 
 end

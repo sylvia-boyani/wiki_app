@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "welcome/ine"
+  resources :wiki_posts
   get "welcome/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  get "welcome/about"
+  get "about", to: redirect('/welcome/about')
+  root "welcome#index"
 end
